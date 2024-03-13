@@ -23,8 +23,9 @@ def main():
             sender = ''
         else:
             sender = last_operation['from']
-        last_operation = LastOperations(tranf_date=date_transfer, descrip_transf=descrip_transfer, where_from=sender, where=recipient,
-                              amount_transf=transfer_amount, currency_transf=transfer_currency)
+        last_operation = LastOperations(tranf_date=date_transfer, descrip_transf=descrip_transfer, where_from=sender,
+                                        where=recipient,
+                                        amount_transf=transfer_amount, currency_transf=transfer_currency)
         last_operation.format_date()
         last_operation.masking_card_numbers()
         last_operation.masking_bank_account()
