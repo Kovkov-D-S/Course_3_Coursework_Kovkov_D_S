@@ -1,21 +1,15 @@
 # Импортируем формат файлов "json".
 import json
 
-
-# Импортируем модуль "os" для работы с файлами.
-import os
-
-
-# Импортируем модуль "datetime" для перевода даты в стороком виде с формат даты.
+# Импортируем модуль "datetime" для перевода даты в строке в вид с форматом даты.
 from datetime import datetime
-
-
-# Импортируем класс объекта из файла created_words.py
-from utils.last_operations import LastOperations
-
+from pprint import pprint
 
 # Строим пути к файлам с учетом особенностей ОС.
-file_operations = os.path.join('.\src', 'operations.json')
+import os
+
+ROOT_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+file_operations = os.path.join(ROOT_PATH, 'src', 'operations.json')
 
 
 def load_operations():
